@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--metadata of page-->
+        <!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <meta name="title">
+    <!--title-->
+        <title>Random Story Generator</title>
+    <!--favicon for top title-->
+        <link rel="icon" type="image/png" sizes="24x24" href="img/favicon.png">
+    <!-- styling css -->
+        <style>
+            /* body */
+                body {
+                font-family: Helvetica;
+                padding: 0px;
+                margin: 0px;
+                background: hsl(174, 20%, 79%);
+                }
+
+            /* Header/Blog Title */
+                .header {
+                padding: 30px;
+                text-align: center;
+                background-image: url("img/header.jpg");
+                object-fit: cover;
+                color: white;
+                text-shadow: 3px 3px rgb(60, 104, 121);
+                }
+
+                fieldset {
+                margin: 20px;
+                padding: 20px;
+                background: rgb(98, 101, 102);
+                border: groove 5px white;
+                color: white
+                }
+    
+                label {
+                font-size: 20px;
+                }
+
+                h1 {
+                font-size: 40px;
+                }
+
+                h2 {
+                font-size: 20px;
+                font-weight: lighter;
+                padding-left: 18px;
+                }
+
+                button {
+                background-color: #4a7b73;
+                text-align: center;
+                padding: 20px;
+                margin-bottom: 5%;
+                font-size: 15px;
+                color: white;
+                }
+
+                button:hover {
+                background-color: #386861;
+                color: white;
+                font-size: 16px;
+                }
+
+                input[type="text"] {
+                    width: 200px;
+                }
+
+                .tip {
+                display: inline-block;
+                color: rgb(187, 187, 187);
+                }
+
+                .tip .tip-hover {
+                visibility: hidden;
+                text-align: center;
+                border: solid 1px black;
+                background-color: rgba(255, 255, 255, 0.705);
+                color: black;
+                padding: 5px;
+                font-size: 13px;
+                }
+
+                .tip:hover .tip-hover {
+                visibility: visible;
+                }
+        </style>
+</head>
+<!-- body info -->
+<body>
+    <div class="header">
+        <h1>Random Story Generator</h1>
+    </div>
+    <div>
+        <form action="generator.php" method="POST">
+            <h2>Please Log into the Site:</h2>
+            <fieldset>
+            <br>
+            <label>First Name:</label>
+            <input type="text" placeholder="Enter your first name." name="firstName">
+            <br><br>
+            <label>Last Name:</label>
+            <input type="text" placeholder="Enter your last name." name="lastName">
+            <br><br>
+            <label>Email Address:</label>
+            <input type="text" placeholder="Enter your email address." name="emailAddress">
+            <br><br>
+            </fieldset>
+            <br>
+            <h2>Now come up with some verbs, adjectives, nouns, and more!
+                Each one of your choices will be processed and transformed into a story!</h2>
+
+            <fieldset>
+            <br>
+            <label>Weather:</label>
+            <input type="text" placeholder="Enter a weather condition." name="weather" required>
+            <div class="tip">?
+                <span class="tip-hover">Ex; cool, humid, rainy</span>
+            </div>
+            <br><br>
+            <label>Time of Day:</label>
+            <input type="text" placeholder="Enter a time of day." name="day" required>
+            <div class="tip">?
+                <span class="tip-hover">Ex; morning, afternoon, night</span>
+            </div>
+            <br><br>
+            <label>Location:</label>
+            <input type="text" placeholder="Enter a location." name="location" required>
+            <div class="tip">?
+                <span class="tip-hover">Ex; field, shopping centre, beach</span>
+            </div>
+            <br><br>
+            <label>Item:</label>
+            <input type="text" placeholder="Enter an item." name="item" required>
+            <div class="tip">?
+                <span class="tip-hover">Ex; phone, wallet, keys</span>
+            </div>
+            <br><br>
+            <label>Adjective:</label>
+            <input type="text" placeholder="Enter an adjective." name="adjective" required>
+            <div class="tip">?
+                <span class="tip-hover">Ex; powerful, abandoned, charming</span>
+            </div>
+            <br><br>
+            <label>Size:</label>
+            <input type="text" placeholder="Enter a size." name="size" required>
+            <div class="tip">?
+                <span class="tip-hover">Ex; small, average, huge</span>
+            </div>
+            <br><br>
+            <label>Emotion:</label>
+            <input type="text" placeholder="Enter an emotion." name="emotion" required>
+            <div class="tip">?
+                <span class="tip-hover">Ex; anxious, astounded, curious</span>
+            </div>
+            <br><br>
+            <label>Color:</label>
+            <input type="text" placeholder="Enter a color." name="color" required>
+            <div class="tip">?
+                <span class="tip-hover">Ex; blue, red, green</span>
+            </div>
+
+            </fieldset>
+            <br>
+            <div style="text-align: center;">
+                <button type="submit">Randomize Story</button>
+            </div>
+         </form>
+    </div>
+
+</body>
+</html>
